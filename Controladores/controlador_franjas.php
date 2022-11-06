@@ -86,7 +86,7 @@ public function formularioInsertarFranjas()
     // --------------------Formulario de modificación de franjas horarias-----------------------
     public function formularioModificarFranjas() {
         // Recuperamos los datos de la franja a modificar
-        $data["mod_franjas"] = $this->mod_franjas->get($_REQUEST["id"]); // CAMBIADO
+        $data["mod_franjas"] = $this->mod_franjas->get($_REQUEST["id"]);
         // Renderizamos la vista de inserción de franjas horarias, pero enviándole los datos de la franja horaria.
         
         View::render("mod_franjas/form", $data);
