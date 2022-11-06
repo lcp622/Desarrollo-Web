@@ -65,8 +65,8 @@ public function formularioInsertarFranjas()
     {
         if (Seguridad::haySesion()) {
             // Recuperamos el id de la franja que queremos borrar
-            $id = Seguridad::limpiar($_REQUEST["id"]); // CAMBIADO
-            // Pedimos al modelo que intente borrar la franha horaria
+            $id = Seguridad::limpiar($_REQUEST["id"]); 
+            // Pedimos al modelo que intente borrar la franja horaria
             $result = $this->mod_franjas->delete($id);
             // Comprobamos si el borrado ha tenido éxito
             if ($result == 0) {
@@ -97,7 +97,7 @@ public function modificarFranjas()
     {
         if (Seguridad::haySesion()) {
             // Primero, recuperamos todos los datos del formulario
-            $id = Seguridad::limpiar($_REQUEST["id"]); //CAMBIADO
+            $id = Seguridad::limpiar($_REQUEST["id"]); 
             $dayOfWeek = Seguridad::limpiar($_REQUEST["dayOfWeek"]);
             $startTime = Seguridad::limpiar($_REQUEST["startTime"]);
             $endTime = Seguridad::limpiar($_REQUEST["endTime"]);
